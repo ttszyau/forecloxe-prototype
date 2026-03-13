@@ -406,7 +406,7 @@
         </div>
     </section>
 
-    <!-- SECONDARY TRADING INTERFACE -->
+    <!-- SECONDARY TRADING INTERFACE (without market depth) -->
     <section id="trade-section" class="max-w-7xl mx-auto px-6 py-20 border-t border-zinc-800">
         <div class="text-center mb-12">
             <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-3">
@@ -420,31 +420,18 @@
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8">
-            <!-- Chart area -->
-            <div class="lg:col-span-8 space-y-8">
+            <!-- Chart area only -->
+            <div class="lg:col-span-8">
                 <!-- Trading chart photo -->
                 <div class="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden">
                     <img 
-                        src="https://specials-images.forbesimg.com/imageserve/64ee0d8888f9154deb0f2e60/960x0.jpg" 
+                        src="https://www.tradingview.com/chart/BTCUSDT.P/QKKUU4zZ-Candlestick-Patterns-How-to-read-them-like-a-Pro/" 
                         alt="TradingView Candlestick Chart Example" 
                         class="w-full h-auto object-cover"
                         onerror="this.src='https://via.placeholder.com/1200x600/1f2937/ffffff?text=Trading+Chart+Image';"
                     >
                     <div class="p-4 text-center text-sm text-zinc-500">
                         Mock TradingView-style candlestick chart (prototype image)
-                    </div>
-                </div>
-
-                <!-- Market depth photo -->
-                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden">
-                    <img 
-                        src="https://specials-images.forbesimg.com/imageserve/64ee0d8888f9154deb0f2e60/960x0.jpg" 
-                        alt="Crypto Exchange Market Depth / Order Book Chart" 
-                        class="w-full h-auto object-cover"
-                        onerror="this.src='https://via.placeholder.com/1200x400/1f2937/ffffff?text=Market+Depth+Image';"
-                    >
-                    <div class="p-4 text-center text-sm text-zinc-500">
-                        Mock market depth / order book visualization (prototype image)
                     </div>
                 </div>
             </div>
@@ -524,7 +511,7 @@
         </div>
 
         <div class="text-center mt-12 text-zinc-500 text-sm">
-            This is a static prototype trading interface • Images are placeholders from public sources • No real trading occurs
+            This is a static prototype trading interface • Chart image is a placeholder from public sources • No real trading occurs
         </div>
     </section>
 
@@ -696,7 +683,7 @@
         </div>
     </div>
 
-    <!-- Login modal (simple demo) -->
+    <!-- Login modal -->
     <div id="login-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[200]">
         <div class="bg-zinc-900 rounded-3xl p-10 max-w-md w-full">
             <h3 class="text-2xl font-semibold mb-8">Welcome back to Forecloxe</h3>
@@ -714,6 +701,7 @@
     </div>
 
     <script>
+        // Open property detail modal
         function openPropertyModal(id) {
             const modal = document.getElementById('property-modal');
             const title = document.getElementById('modal-property-title');
@@ -743,9 +731,8 @@
         }
        
         function closeModal() {
-            const modal = document.getElementById('property-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            document.getElementById('property-modal').classList.add('hidden');
+            document.getElementById('property-modal').classList.remove('flex');
         }
        
         function buyTokensQuick(id) {
@@ -772,9 +759,9 @@
             document.getElementById('how-section').scrollIntoView({ behavior: 'smooth' });
         }
        
-        // Smooth scroll for all anchor links
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
@@ -791,7 +778,7 @@
         });
        
         window.onload = function() {
-            console.log('%cForecloxe Prototype – Trading UI with images loaded', 'color:#10b981');
+            console.log('%cForecloxe Prototype – Trading UI updated (no market depth)', 'color:#10b981');
         };
     </script>
 </body>
