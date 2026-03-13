@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Forecloxe • Tokenized Foreclosed Real Estate</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .hero-bg {
             background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+
         .modal {
             animation: modalPop 0.3s ease-out forwards;
         }
+
         @keyframes modalPop {
             from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
+            to   { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="bg-zinc-950 text-white min-h-screen">
+
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 bg-zinc-900 border-b border-zinc-800 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -39,17 +51,17 @@
                 <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">F</div>
                 <span class="logo-font text-3xl font-semibold tracking-tighter">Forecloxe</span>
             </div>
-            
+
             <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                 <a href="#" class="hover:text-emerald-400 transition-colors">Discover</a>
                 <a href="#" class="hover:text-emerald-400 transition-colors">Marketplace</a>
-                <a href="#" class="hover:text-emerald-400 transition-colors">Trade</a>
+                <a href="#trade-section" class="hover:text-emerald-400 transition-colors">Trade</a>
                 <a href="#" class="hover:text-emerald-400 transition-colors">For Banks</a>
                 <a href="#" onclick="showHowItWorks()" class="hover:text-emerald-400 transition-colors">How it Works</a>
             </div>
-            
+
             <div class="flex items-center gap-x-4">
-                <button onclick="fakeConnectWallet()" 
+                <button onclick="fakeConnectWallet()"
                         class="px-6 py-2.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-2xl text-sm font-medium transition-all flex items-center gap-x-2">
                     <i class="fa-solid fa-wallet"></i>
                     <span>Connect Wallet</span>
@@ -69,17 +81,17 @@
                 <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                 Hong Kong Foreclosed Properties • SFC Compliant
             </div>
-            
+           
             <h1 class="text-7xl font-semibold tracking-tighter leading-none mb-6 max-w-4xl mx-auto">
                 Own a slice of Hong Kong real estate.<br>
                 <span class="text-emerald-400">Before the bank sells it.</span>
             </h1>
-            
+           
             <p class="text-2xl text-zinc-300 max-w-2xl mx-auto mb-10">
                 Tokenize foreclosed properties → Trade 24/7 → Auto-settle at auction.<br>
                 Real assets. Real returns. Zero title transfer.
             </p>
-            
+           
             <div class="flex flex-wrap justify-center gap-4">
                 <button onclick="document.getElementById('featured-section').scrollIntoView({behavior:'smooth'})"
                         class="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-lg font-semibold rounded-3xl flex items-center gap-x-3 transition-all">
@@ -91,7 +103,7 @@
                     For Banks: List Your Property →
                 </button>
             </div>
-            
+           
             <!-- Trust bar -->
             <div class="mt-20 flex justify-center items-center gap-x-12 text-xs uppercase tracking-widest text-zinc-400">
                 <div class="flex items-center gap-x-2"><i class="fa-solid fa-shield-halved"></i> SFC Gated</div>
@@ -130,17 +142,17 @@
                 <span class="text-emerald-400 font-medium tracking-widest text-sm">LIVE ON PLATFORM</span>
                 <h2 class="text-5xl font-semibold tracking-tighter">Featured Properties</h2>
             </div>
-            <a href="#" onclick="alert('Marketplace coming in full version!')" 
+            <a href="#" onclick="alert('Marketplace coming in full version!')"
                class="text-emerald-400 flex items-center gap-x-2 hover:underline">
                 View all listings <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
-        
+       
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Property 1 -->
-            <div onclick="openPropertyModal(1)" 
+            <div onclick="openPropertyModal(1)"
                  class="bg-zinc-900 rounded-3xl overflow-hidden card-hover cursor-pointer">
-                <img src="https://www.intdesign.com.hk/wp-content/uploads/2023/11/HenleyPark07-1.jpg" alt="Kowloon Flat" 
+                <img src="https://www.intdesign.com.hk/wp-content/uploads/2023/11/HenleyPark07-1.jpg" alt="Kowloon Flat"
                      class="w-full h-64 object-cover">
                 <div class="p-8">
                     <div class="flex justify-between items-start">
@@ -153,7 +165,7 @@
                             <div class="text-3xl font-semibold">HK$6.0M</div>
                         </div>
                     </div>
-                    
+                   
                     <div class="mt-8 grid grid-cols-2 gap-6 text-sm">
                         <div>
                             <div class="text-zinc-400">Tokens Issued</div>
@@ -162,7 +174,7 @@
                         <div>
                             <div class="text-zinc-400">Current Token Price</div>
                             <div class="font-medium flex items-center gap-x-1">
-                                HK$1,145 
+                                HK$1,145
                                 <span class="text-emerald-400 text-xs">+14.5%</span>
                             </div>
                         </div>
@@ -175,7 +187,7 @@
                             <div class="font-medium">80% tokens offered</div>
                         </div>
                     </div>
-                    
+                   
                     <button onclick="event.stopImmediatePropagation(); buyTokensQuick(1)"
                             class="mt-8 w-full bg-emerald-500 hover:bg-emerald-600 py-4 rounded-2xl font-semibold transition-all">
                         Buy Tokens Now
@@ -184,9 +196,9 @@
             </div>
 
             <!-- Property 2 -->
-            <div onclick="openPropertyModal(2)" 
+            <div onclick="openPropertyModal(2)"
                  class="bg-zinc-900 rounded-3xl overflow-hidden card-hover cursor-pointer">
-                <img src="https://cdn.spacious.hk/uploads/property_image/140767512/image/small_thumb-67d8d654ecda911da2db97f9256e55c0.jpg" alt="Tsim Sha Tsui" 
+                <img src="https://cdn.spacious.hk/uploads/property_image/140767512/image/small_thumb-67d8d654ecda911da2db97f9256e55c0.jpg" alt="Tsim Sha Tsui"
                      class="w-full h-64 object-cover">
                 <div class="p-8">
                     <div class="flex justify-between items-start">
@@ -199,7 +211,7 @@
                             <div class="text-3xl font-semibold">HK$3.2M</div>
                         </div>
                     </div>
-                    
+                   
                     <div class="mt-8 grid grid-cols-2 gap-6 text-sm">
                         <div>
                             <div class="text-zinc-400">Tokens Issued</div>
@@ -208,7 +220,7 @@
                         <div>
                             <div class="text-zinc-400">Current Token Price</div>
                             <div class="font-medium flex items-center gap-x-1">
-                                HK$980 
+                                HK$980
                                 <span class="text-amber-400 text-xs">-2%</span>
                             </div>
                         </div>
@@ -221,7 +233,7 @@
                             <div class="font-medium">75% tokens offered</div>
                         </div>
                     </div>
-                    
+                   
                     <button onclick="event.stopImmediatePropagation(); buyTokensQuick(2)"
                             class="mt-8 w-full bg-emerald-500 hover:bg-emerald-600 py-4 rounded-2xl font-semibold transition-all">
                         Buy Tokens Now
@@ -230,9 +242,9 @@
             </div>
 
             <!-- Property 3 -->
-            <div onclick="openPropertyModal(3)" 
+            <div onclick="openPropertyModal(3)"
                  class="bg-zinc-900 rounded-3xl overflow-hidden card-hover cursor-pointer">
-                <img src="https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fres-cms.midland.com.hk%2Fi_Stock_1246218800_235d40cdcc.jpg" alt="Mid-Levels" 
+                <img src="https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fres-cms.midland.com.hk%2Fi_Stock_1246218800_235d40cdcc.jpg" alt="Mid-Levels"
                      class="w-full h-64 object-cover">
                 <div class="p-8">
                     <div class="flex justify-between items-start">
@@ -245,7 +257,7 @@
                             <div class="text-3xl font-semibold">HK$8.5M</div>
                         </div>
                     </div>
-                    
+                   
                     <div class="mt-8 grid grid-cols-2 gap-6 text-sm">
                         <div>
                             <div class="text-zinc-400">Tokens Issued</div>
@@ -254,7 +266,7 @@
                         <div>
                             <div class="text-zinc-400">Current Token Price</div>
                             <div class="font-medium flex items-center gap-x-1">
-                                HK$1,320 
+                                HK$1,320
                                 <span class="text-emerald-400 text-xs">+32%</span>
                             </div>
                         </div>
@@ -267,7 +279,7 @@
                             <div class="font-medium">85% tokens offered</div>
                         </div>
                     </div>
-                    
+                   
                     <button onclick="event.stopImmediatePropagation(); buyTokensQuick(3)"
                             class="mt-8 w-full bg-emerald-500 hover:bg-emerald-600 py-4 rounded-2xl font-semibold transition-all">
                         Buy Tokens Now
@@ -284,7 +296,7 @@
                 <span class="text-emerald-400 text-sm font-medium tracking-widest">EXACTLY AS DESIGNED</span>
                 <h2 class="text-5xl font-semibold tracking-tighter mt-2">How Forecloxe Works</h2>
             </div>
-            
+           
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Step 1 -->
                 <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
@@ -299,7 +311,7 @@
                         <li class="flex gap-x-3"><span class="text-emerald-400">•</span> 1–2% platform listing fee</li>
                     </ul>
                 </div>
-                
+               
                 <!-- Step 2 -->
                 <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
                     <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
@@ -313,7 +325,7 @@
                         <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Master Participation Agreement signed</li>
                     </ul>
                 </div>
-                
+               
                 <!-- Step 3 -->
                 <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
                     <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
@@ -327,7 +339,7 @@
                         <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Price floats on sentiment &amp; news</li>
                     </ul>
                 </div>
-                
+               
                 <!-- Step 4 -->
                 <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
                     <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
@@ -342,7 +354,7 @@
                     </ul>
                 </div>
             </div>
-            
+           
             <div class="text-center mt-12 text-zinc-400 text-sm">
                 No title ever transfers. Bank always owns the asset. Tokens = pure economic rights.<br>
                 Fully compliant with Hong Kong law.
@@ -353,7 +365,7 @@
     <!-- LIVE SECONDARY MARKET PREVIEW -->
     <section class="max-w-7xl mx-auto px-6 py-20">
         <h2 class="text-4xl font-semibold tracking-tighter mb-10">Live Secondary Market</h2>
-        
+       
         <div class="bg-zinc-900 rounded-3xl overflow-hidden">
             <table class="w-full">
                 <thead class="bg-zinc-800">
@@ -374,7 +386,7 @@
                         <td class="p-6 text-right text-emerald-400">+14.5%</td>
                         <td class="p-6 text-right">HK$2.8M</td>
                         <td class="p-6">
-                            <button onclick="openPropertyModal(1)" 
+                            <button onclick="openPropertyModal(1)"
                                     class="px-8 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-2xl text-xs font-medium">TRADE</button>
                         </td>
                     </tr>
@@ -385,7 +397,7 @@
                         <td class="p-6 text-right text-amber-400">-2.0%</td>
                         <td class="p-6 text-right">HK$1.1M</td>
                         <td class="p-6">
-                            <button onclick="openPropertyModal(2)" 
+                            <button onclick="openPropertyModal(2)"
                                     class="px-8 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-2xl text-xs font-medium">TRADE</button>
                         </td>
                     </tr>
@@ -396,7 +408,7 @@
                         <td class="p-6 text-right text-emerald-400">+32%</td>
                         <td class="p-6 text-right">HK$4.3M</td>
                         <td class="p-6">
-                            <button onclick="openPropertyModal(3)" 
+                            <button onclick="openPropertyModal(3)"
                                     class="px-8 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-2xl text-xs font-medium">TRADE</button>
                         </td>
                     </tr>
@@ -405,17 +417,148 @@
         </div>
     </section>
 
+    <!-- ──────────────────────────────────────────────── -->
+    <!--               SECONDARY TRADING UI                 -->
+    <!-- ──────────────────────────────────────────────── -->
+    <section id="trade-section" class="max-w-7xl mx-auto px-6 py-20 border-t border-zinc-800">
+        <div class="text-center mb-12">
+            <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-3">
+                Trade <span class="text-emerald-400">KOW-001</span> • Kai Dak 2-Bed
+            </h2>
+            <p class="text-xl text-zinc-400">
+                Last price: <span class="text-emerald-400 font-semibold">HK$1,162.00</span>  
+                • 24h change: <span class="text-emerald-400">+3.8%</span>  
+                • Volume: HK$4.12M
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8">
+            <!-- Chart + depth -->
+            <div class="lg:col-span-8 space-y-8">
+                <!-- Mock price chart -->
+                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden h-[480px] relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-zinc-600 text-2xl font-medium">
+                        TradingView-style Chart (mock)
+                    </div>
+                    <!-- Fake lines -->
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1200 480" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="greenfade" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <polyline points="0,400 150,380 300,360 450,340 600,320 750,300 900,280 1050,260 1200,240"
+                                  fill="url(#greenfade)" stroke="#10b981" stroke-width="3"/>
+                        <polyline points="0,420 150,410 300,390 450,370 600,350 750,330 900,310 1050,290 1200,270"
+                                  fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,4"/>
+                    </svg>
+                    <div class="absolute bottom-4 left-4 text-sm text-zinc-500">
+                        1h • 4h • 1D • 1W • 1M
+                    </div>
+                </div>
+
+                <!-- Market depth mock -->
+                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 p-6">
+                    <h3 class="text-xl font-semibold mb-4">Market Depth</h3>
+                    <div class="h-48 flex items-end">
+                        <div class="flex-1 bg-gradient-to-t from-emerald-900/60 to-transparent"></div>
+                        <div class="w-px bg-zinc-700 mx-1"></div>
+                        <div class="flex-1 bg-gradient-to-t from-rose-900/60 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trading controls + order book + trades -->
+            <div class="lg:col-span-4 space-y-6">
+                <!-- Buy/Sell panel -->
+                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden">
+                    <div class="flex border-b border-zinc-800">
+                        <button class="flex-1 py-4 bg-emerald-900/50 font-semibold text-emerald-400 border-b-2 border-emerald-500">Buy</button>
+                        <button class="flex-1 py-4 text-rose-400 hover:bg-rose-950/30">Sell</button>
+                    </div>
+
+                    <div class="p-6 space-y-6">
+                        <div>
+                            <label class="block text-sm text-zinc-400 mb-2">Limit Price (HK$)</label>
+                            <input type="text" value="1,162.00" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-xl font-medium focus:outline-none focus:border-emerald-500"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-zinc-400 mb-2">Amount (Tokens)</label>
+                            <input type="text" value="50" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-xl font-medium focus:outline-none focus:border-emerald-500"/>
+                        </div>
+                        <div class="text-sm text-zinc-500 flex justify-between">
+                            <span>Total</span>
+                            <span class="text-white font-medium">≈ HK$58,100</span>
+                        </div>
+                        <button class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-lg transition-colors">
+                            Place Buy Order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Order book -->
+                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 p-6">
+                    <h3 class="text-lg font-semibold mb-4">Order Book</h3>
+                    <div class="text-sm font-mono space-y-1">
+                        <div class="flex justify-between text-emerald-400">
+                            <span>1,165.50</span> <span>380</span>
+                        </div>
+                        <div class="flex justify-between text-emerald-400">
+                            <span>1,164.00</span> <span>1,120</span>
+                        </div>
+                        <div class="flex justify-between bg-emerald-900/30 text-emerald-300 font-medium">
+                            <span>1,162.00</span> <span>last</span>
+                        </div>
+                        <div class="flex justify-between text-rose-400">
+                            <span>1,160.50</span> <span>640</span>
+                        </div>
+                        <div class="flex justify-between text-rose-400">
+                            <span>1,159.00</span> <span>1,950</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent trades -->
+                <div class="bg-zinc-900 rounded-2xl border border-zinc-800 p-6">
+                    <h3 class="text-lg font-semibold mb-4">Recent Trades</h3>
+                    <div class="text-sm font-mono space-y-1">
+                        <div class="flex justify-between">
+                            <span>1,162.00</span>
+                            <span class="text-emerald-400">+45</span>
+                            <span class="text-zinc-500">12:41:22</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>1,161.80</span>
+                            <span class="text-rose-400">-180</span>
+                            <span class="text-zinc-500">12:40:58</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>1,163.10</span>
+                            <span class="text-emerald-400">+320</span>
+                            <span class="text-zinc-500">12:39:14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 text-zinc-500 text-sm">
+            This is a static prototype mock trading interface • No real orders are executed • For demonstration purposes only
+        </div>
+    </section>
+
     <!-- FOR BANKS -->
     <section id="for-banks" class="bg-zinc-900 py-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-5xl font-semibold tracking-tighter mb-6">Banks &amp; Foreclosure Teams</h2>
             <p class="text-xl text-zinc-300 mb-10">List your foreclosed assets in under 48 hours.<br>Reach thousands of accredited investors instantly.</p>
-            
+           
             <button onclick="alert('Bank portal coming soon! Submit your valuation report to hello@forecloxe.com')"
                     class="px-12 py-5 bg-white text-zinc-950 font-semibold text-lg rounded-3xl hover:scale-105 transition-all">
                 Submit Property for Tokenization →
             </button>
-            
+           
             <div class="mt-16 text-xs text-zinc-400">1–2% listing fee • Full SFC compliance • Zero title transfer risk</div>
         </div>
     </section>
@@ -467,17 +610,15 @@
     <!-- PROPERTY DETAIL MODAL -->
     <div id="property-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100] p-6">
         <div class="modal bg-zinc-900 max-w-6xl w-full rounded-3xl overflow-hidden max-h-[92vh] overflow-y-auto">
-            <!-- Modal Header -->
             <div class="flex items-center justify-between p-8 border-b border-zinc-800 sticky top-0 bg-zinc-900 z-10">
                 <div id="modal-property-title" class="text-3xl font-semibold"></div>
                 <button onclick="closeModal()" class="text-3xl text-zinc-400 hover:text-white">×</button>
             </div>
-            
+           
             <div class="grid grid-cols-1 lg:grid-cols-12">
-                <!-- Left column - Info & Chart -->
                 <div class="lg:col-span-7 p-8">
                     <img id="modal-image" src="" alt="" class="w-full h-80 object-cover rounded-3xl mb-8">
-                    
+                   
                     <div class="flex gap-8 mb-10">
                         <div>
                             <div class="text-xs uppercase tracking-widest text-zinc-400">Bank Reserve</div>
@@ -488,23 +629,20 @@
                             <div id="modal-token-price" class="text-5xl font-semibold"></div>
                         </div>
                     </div>
-                    
-                    <!-- Fake Chart -->
+                   
                     <div class="bg-zinc-950 rounded-3xl p-6 h-80 flex items-center justify-center relative">
                         <div class="text-center">
                             <i class="fa-solid fa-chart-line text-8xl text-emerald-400/30 mb-6"></i>
                             <div class="text-zinc-400">Live Price Chart (TradingView style)</div>
                             <div class="text-xs text-emerald-400 mt-2">Mock 30-day performance • +14.5%</div>
                         </div>
-                        <!-- Fake line chart SVG -->
                         <svg width="100%" height="100%" class="absolute inset-0 opacity-30">
-                            <polyline points="50,220 150,180 280,160 420,190 580,120 720,90" 
+                            <polyline points="50,220 150,180 280,160 420,190 580,120 720,90"
                                       fill="none" stroke="#10b981" stroke-width="4" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
-                
-                <!-- Right column - Trading Panel -->
+               
                 <div class="lg:col-span-5 bg-zinc-950 border-l border-zinc-800 p-8 flex flex-col">
                     <div class="mb-8">
                         <div class="flex justify-between text-sm mb-2">
@@ -515,30 +653,28 @@
                             <div class="h-3 w-1/3 bg-emerald-400 rounded-3xl"></div>
                         </div>
                     </div>
-                    
-                    <!-- Buy Panel -->
+                   
                     <div class="bg-zinc-900 rounded-3xl p-6 mb-8">
                         <div class="flex justify-between mb-6">
                             <span class="font-medium">Buy Tokens</span>
                             <span class="text-emerald-400 text-xs">Instant settlement</span>
                         </div>
-                        
+                       
                         <div class="flex gap-3 mb-6">
-                            <input id="buy-amount" type="text" value="10" 
+                            <input id="buy-amount" type="text" value="10"
                                    class="flex-1 bg-zinc-800 border border-zinc-700 focus:border-emerald-400 rounded-2xl px-6 py-4 text-3xl font-medium outline-none">
                             <div class="flex flex-col justify-center text-xs text-zinc-400">
                                 <div>TOKENS</div>
                                 <div class="text-emerald-400">KOW-001</div>
                             </div>
                         </div>
-                        
-                        <button onclick="executeMockBuy()" 
+                       
+                        <button onclick="executeMockBuy()"
                                 class="w-full py-5 bg-emerald-500 hover:bg-emerald-600 font-semibold text-lg rounded-3xl transition-all">
                             BUY HK$11,450 WORTH
                         </button>
                     </div>
-                    
-                    <!-- Order Book -->
+                   
                     <div class="flex-1">
                         <div class="text-xs uppercase tracking-widest mb-3 text-zinc-400">Order Book</div>
                         <div class="text-[13px]">
@@ -564,7 +700,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                   
                     <div class="mt-auto pt-6 text-[10px] text-zinc-500 text-center">
                         Trading closes 14 months before auction • Smart contract payout guaranteed
                     </div>
@@ -573,100 +709,100 @@
         </div>
     </div>
 
-    <!-- Login modal (simple demo) -->
+    <!-- Login modal -->
     <div id="login-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[200]">
         <div class="bg-zinc-900 rounded-3xl p-10 max-w-md w-full">
             <h3 class="text-2xl font-semibold mb-8">Welcome back to Forecloxe</h3>
             <div class="space-y-6">
-                <input type="email" placeholder="Email or Wallet" 
+                <input type="email" placeholder="Email or Wallet"
                        class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-                <input type="password" placeholder="Password" 
+                <input type="password" placeholder="Password"
                        class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-                <button onclick="fakeLogin()" 
+                <button onclick="fakeLogin()"
                         class="w-full py-4 bg-white text-zinc-950 font-semibold rounded-2xl">Log in with Magic Link</button>
             </div>
-            <div onclick="document.getElementById('login-modal').classList.add('hidden')" 
+            <div onclick="document.getElementById('login-modal').classList.add('hidden')"
                  class="text-center mt-8 text-zinc-400 cursor-pointer hover:text-white">Close</div>
         </div>
     </div>
 
     <script>
-        // Tailwind script already loaded via CDN
-        function initTailwind() {
-            // No extra needed
-        }
-        
         function openPropertyModal(id) {
             const modal = document.getElementById('property-modal');
             const title = document.getElementById('modal-property-title');
             const image = document.getElementById('modal-image');
             const valuation = document.getElementById('modal-valuation');
             const tokenPrice = document.getElementById('modal-token-price');
-            
+           
             if (id === 1) {
-                title.textContent = "Kowloon Bay • 3-Bed Flat";
-                image.src = "https://picsum.photos/id/1015/800/600";
+                title.textContent = "Kai Dak • 2-Bed Flat";
+                image.src = "https://www.intdesign.com.hk/wp-content/uploads/2023/11/HenleyPark07-1.jpg";
                 valuation.textContent = "HK$6.0M";
                 tokenPrice.textContent = "HK$1,145";
             } else if (id === 2) {
                 title.textContent = "Tsim Sha Tsui • Studio";
-                image.src = "https://picsum.photos/id/201/800/600";
+                image.src = "https://cdn.spacious.hk/uploads/property_image/140767512/image/small_thumb-67d8d654ecda911da2db97f9256e55c0.jpg";
                 valuation.textContent = "HK$3.2M";
                 tokenPrice.textContent = "HK$980";
             } else {
                 title.textContent = "Mid-Levels • 2-Bed";
-                image.src = "https://picsum.photos/id/301/800/600";
+                image.src = "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fres-cms.midland.com.hk%2Fi_Stock_1246218800_235d40cdcc.jpg";
                 valuation.textContent = "HK$8.5M";
                 tokenPrice.textContent = "HK$1,320";
             }
-            
+           
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
-        
+       
         function closeModal() {
-            const modal = document.getElementById('property-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            document.getElementById('property-modal').classList.add('hidden');
+            document.getElementById('property-modal').classList.remove('flex');
         }
-        
+       
         function buyTokensQuick(id) {
             event.stopImmediatePropagation();
             alert(`✅ Tokens purchased for property #${id}!\n\n(This is a prototype mock transaction)`);
         }
-        
+       
         function executeMockBuy() {
             const amount = document.getElementById('buy-amount').value;
             alert(`🎉 ${amount} tokens purchased at current market price!\nSmart contract executed.`);
             closeModal();
         }
-        
+       
         function fakeConnectWallet() {
             alert("🪪 Wallet connected (demo)\n0x742d35Cc... (Mock address)");
         }
-        
+       
         function fakeLogin() {
             alert("✅ Logged in as Accredited Investor (SFC verified)");
             document.getElementById('login-modal').classList.add('hidden');
         }
-        
+       
         function showHowItWorks() {
             document.getElementById('how-section').scrollIntoView({ behavior: 'smooth' });
         }
-        
-        // Keyboard escape support
+       
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+       
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") {
-                const modal = document.getElementById('property-modal');
-                if (!modal.classList.contains('hidden')) closeModal();
-                const loginModal = document.getElementById('login-modal');
-                if (!loginModal.classList.contains('hidden')) loginModal.classList.add('hidden');
+                closeModal();
+                document.getElementById('login-modal')?.classList.add('hidden');
             }
         });
-        
-        // Auto-init
+       
         window.onload = function() {
-            console.log('%cForecloxe Prototype v1.0 ready ✅\nBuilt with Tailwind + pure HTML/JS', 'color:#10b981; font-family:monospace');
+            console.log('%cForecloxe Prototype v1.1 – with mock trading UI ✅', 'color:#10b981; font-family:monospace');
         };
     </script>
 </body>
