@@ -32,6 +32,7 @@
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
+
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 bg-zinc-900 border-b border-zinc-800 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -277,77 +278,151 @@
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="how-section" class="bg-zinc-900 py-20">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- HOW IT WORKS – Enhanced Visual Flow -->
+    <section id="how-section" class="bg-zinc-900 py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-emerald-400 text-sm font-medium tracking-widest">EXACTLY AS DESIGNED</span>
-                <h2 class="text-5xl font-semibold tracking-tighter mt-2">How Forecloxe Works</h2>
+                <span class="inline-block px-5 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-medium tracking-widest mb-4">
+                    FROM FORECLOSURE TO PAYOUT
+                </span>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-tight">
+                    How Forecloxe Tokenizes &amp; Trades<br>Foreclosed Hong Kong Properties
+                </h2>
+                <p class="mt-6 text-xl text-zinc-300 max-w-3xl mx-auto">
+                    A complete lifecycle — bank-controlled, investor-friendly, SFC-compliant.<br>
+                    No title transfer. Pure economic rights via smart contract.
+                </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-file-invoice text-2xl"></i>
+
+            <!-- Timeline Container -->
+            <div class="relative">
+                <!-- Horizontal connecting line (desktop) -->
+                <div class="hidden md:block absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/30 via-emerald-400/50 to-emerald-500/30"></div>
+
+                <!-- Vertical line on mobile -->
+                <div class="md:hidden absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-zinc-800"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 relative">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col items-center text-center md:pt-0 pt-12">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-emerald-400">1</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Bank Valuation &amp; Listing</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            Independent valuation → Bank sets reserve, token count (e.g. 6,000 × HK$1,000), public % (80%), auction timeline (12–24 months) &amp; re-auction rules.
+                        </p>
+                        <!-- SVG Icon -->
+                        <svg class="w-16 h-16 mt-6 text-emerald-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h-4m-6 0H5a2 2 0 001-1.732V5a1 1 0 011-1h10a1 1 0 011 1v14.268A2 2 0 0019 21z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6M9 11h6" />
+                        </svg>
+                        <!-- Mobile connector -->
+                        <div class="md:hidden absolute top-32 left-1/2 h-16 w-1 bg-emerald-500/40"></div>
                     </div>
-                    <div class="text-xl font-semibold mb-2">Step 1 – Bank Valuation &amp; Listing</div>
-                    <ul class="space-y-3 text-sm text-zinc-300">
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Independent surveyor valuation</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Bank sets reserve &amp; token supply (e.g. 6,000 tokens @ HK$1,000)</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> 80% public sale, bank retains 20%</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> 1–2% platform listing fee</li>
-                    </ul>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-coins text-2xl"></i>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col items-center text-center md:pt-20 pt-20">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-emerald-400">2</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Token Issuance &amp; Initial Offering</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            Compliant security tokens issued (ERC-3643 style) → Fixed-price sale to KYC’d investors → Master Participation Agreement signed → Bank retains portion for upside.
+                        </p>
+                        <!-- SVG Icon -->
+                        <svg class="w-16 h-16 mt-6 text-emerald-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <!-- Connector -->
+                        <div class="hidden md:block absolute top-14 left-0 w-full h-0.5 bg-emerald-500/40 -translate-y-1/2"></div>
                     </div>
-                    <div class="text-xl font-semibold mb-2">Step 2 – Token Issuance &amp; Offering</div>
-                    <ul class="space-y-3 text-sm text-zinc-300">
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> ERC-3643 compliant security tokens</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> KYC/AML + SFC gating enforced</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Fixed price offering based on bank valuation</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Master Participation Agreement signed</li>
-                    </ul>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-chart-line text-2xl"></i>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col items-center text-center md:pt-0 pt-20">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-emerald-400">3</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Secondary Trading Period</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            24/7 order-book market on Forecloxe → Limit/market orders → Price floats on sentiment &amp; news → 0.5–1% commission → Continues until auction date.
+                        </p>
+                        <!-- SVG Icon -->
+                        <svg class="w-16 h-16 mt-6 text-emerald-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
                     </div>
-                    <div class="text-xl font-semibold mb-2">Step 3 – Secondary Trading</div>
-                    <ul class="space-y-3 text-sm text-zinc-300">
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> 24/7 order-book market</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Limit &amp; market orders</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> 0.5–1% trading commission</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Price floats on sentiment &amp; news</li>
-                    </ul>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-gavel text-2xl"></i>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col items-center text-center md:pt-20 pt-20 col-start-2 md:col-start-1">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-emerald-400">4</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Auction Execution</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            Trading locks → Platform runs final public auction for physical property → Bank sells asset traditionally or via platform.
+                        </p>
+                        <!-- SVG Icon -->
+                        <svg class="w-16 h-16 mt-6 text-emerald-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 10.5V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-8.5M3 10.5h18M9 15h6" />
+                        </svg>
+                        <!-- Mobile connector -->
+                        <div class="md:hidden absolute top-0 left-1/2 h-20 w-1 bg-emerald-500/40 -translate-y-full"></div>
                     </div>
-                    <div class="text-xl font-semibold mb-2">Step 4 – Auction &amp; Settlement</div>
-                    <ul class="space-y-3 text-sm text-zinc-300">
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Trading locks on auction date</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Public property auction (Dutch/English)</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Smart contract auto-distributes net proceeds pro-rata</li>
-                        <li class="flex gap-x-3"><span class="text-emerald-400">•</span> Bank keeps retained tokens + ownership</li>
-                    </ul>
+
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col items-center text-center md:pt-0 pt-20">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-emerald-400">5</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Smart Contract Settlement</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            Net proceeds to escrow → Smart contract auto-distributes pro-rata to all token holders → Bank gets retained share + ownership proceeds.
+                        </p>
+                        <!-- SVG Icon -->
+                        <svg class="w-16 h-16 mt-6 text-emerald-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 9V7a5 5 0 00-10 0v2m-3 0h16a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 6 (Re-auction loop) -->
+                    <div class="relative flex flex-col items-center text-center md:pt-20 pt-20 md:col-start-3">
+                        <div class="relative z-10 w-24 h-24 md:w-28 md:h-28 bg-zinc-950 border-4 border-amber-500 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-amber-500/20">
+                            <span class="text-4xl md:text-5xl font-bold text-amber-400">6</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Re-auction or Cancel</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                            If no sale → Tokens unlock → Cycle repeats per bank rules (e.g. every 6 months) until sold or cancelled.
+                        </p>
+                        <!-- SVG Icon (loop) -->
+                        <svg class="w-16 h-16 mt-6 text-amber-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        <!-- Connector back -->
+                        <div class="hidden md:block absolute -bottom-16 left-1/2 w-px h-32 bg-amber-500/40 origin-top rotate-45"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12 text-zinc-400 text-sm">
-                No title ever transfers. Bank always owns the asset. Tokens = pure economic rights.<br>
-                Fully compliant with Hong Kong law.
+
+                <!-- Central Platform Hub (floating badge) -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
+                    <div class="w-48 h-48 rounded-full bg-gradient-to-br from-emerald-600/20 to-emerald-800/10 border-2 border-emerald-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center">
+                            <div class="text-emerald-400 font-bold text-xl">Forecloxe</div>
+                            <div class="text-zinc-400 text-xs mt-1">Platform Hub</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final note -->
+                <div class="text-center mt-20 text-zinc-400 text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
+                    Bank always retains legal title to the property.<br>
+                    Tokens represent <strong>economic participation rights only</strong> — settled automatically via smart contract on successful auction.
+                </div>
             </div>
         </div>
+
+        <!-- Subtle background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 pointer-events-none"></div>
     </section>
 
     <!-- LIVE SECONDARY MARKET PREVIEW -->
@@ -591,11 +666,6 @@
     </div>
 
     <script>
-        // Tailwind script already loaded via CDN
-        function initTailwind() {
-            // No extra needed
-        }
-        
         function openPropertyModal(id) {
             const modal = document.getElementById('property-modal');
             const title = document.getElementById('modal-property-title');
@@ -654,7 +724,6 @@
             document.getElementById('how-section').scrollIntoView({ behavior: 'smooth' });
         }
         
-        // Keyboard escape support
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") {
                 const modal = document.getElementById('property-modal');
@@ -664,7 +733,6 @@
             }
         });
         
-        // Auto-init
         window.onload = function() {
             console.log('%cForecloxe Prototype v1.0 ready ✅\nBuilt with Tailwind + pure HTML/JS', 'color:#10b981; font-family:monospace');
         };
